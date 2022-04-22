@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar Hover Effects</title>
+
+    <link rel="stylesheet" type="text/css" href="search_2.css">
+</head>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #232323;
+}
+
+.searchBox{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.searchBox:hover{
+    width: 350px;
+    border-bottom: 1.5px solid #fff;
+}
+
+.searchBox input{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border:none;
+    padding: 10px 20px;
+    outline: none;
+    font-size: 1.1em;
+    color: #555;
+     background: #232323;
+}
+
+.searchBox input::placeholder,
+.searchBox input{
+    color: transparent;
+}
+
+.searchBox:hover input::placeholder,
+.searchBox:hover input{
+    color: #555;
+}
+
+ion-icon{
+    position: absolute;
+    right: 20px;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+</style>
+
+<body>
+    <div class="searchBox">
+        <input type="text" placeholder="Search">
+        <ion-icon name="search-outline"></ion-icon>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
